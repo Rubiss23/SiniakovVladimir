@@ -55,4 +55,3 @@ along!(stop_condition::Function, robot::BorderRobot, side::HorizonSide) =
     while !stop_condition() && try_move!(robot, side) end
 #-----------------------------------------------
 
-println("Бордер тут")

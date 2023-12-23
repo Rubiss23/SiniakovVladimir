@@ -35,4 +35,3 @@ HSR.move!(robot::ChessRobot,num_steps::Integer, side) =
         end
     end
 
-println("Чесс тут")
