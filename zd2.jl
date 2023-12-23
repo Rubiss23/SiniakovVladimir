@@ -1,5 +1,5 @@
 include("func.jl")
-robot = Robot(animate = true);
+robot = Robot("sits/zd2.sit",animate = true);
 
 function zd2(robot)
 

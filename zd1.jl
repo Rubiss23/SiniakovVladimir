@@ -1,5 +1,5 @@
 include("func.jl")
-robot = Robot(animate = true)
+robot = Robot("sits/zd1.sit",animate = true)
 
 function rekmove!(robot,side)
 

@@ -100,16 +100,28 @@ end
 
 function markall!(robot)
 
-    side1 = Ost
+    if isborder(robot,Ost)
+        side1 = West
+    else
+        side1 = Ost
+    end
 
-    while !(isborder(robot,Sud) && isborder(robot,Ost))
+    if isborder(robot,Sud)
+        side2 = Nord
+    else
+        side2 = Sud
+    end
+
+    while !(isborder(robot,side2) && isborder(robot,side1))
         while !isborder(robot,side1)
             markline(robot,side1)
         end
         putmarker!(robot)
-        if !isborder(robot,Sud)
-            move!(robot,Sud)
+        if !isborder(robot,side2)
+            move!(robot,side2)
             putmarker!(robot)
+        else 
+            break
         end
         side1=inverse(side1)
     end
@@ -132,25 +144,17 @@ function diag(robot,side1,side2)
 
 end
 
-function crest(robot,side1,side2)
+function crest(robot)
 
-    diag(robot,side1,side2)
-
-    side1 = inverse(side1)
-
-    diag(robot,side1,side2)
-
-    side2 = inverse(side2)
-
-    diag(robot,side1,side2)
-
-    side1 = inverse(side1)
-
-    diag(robot,side1,side2)
-
-    putmarker!(robot)
-
+    side1 = Nord
+    side2 = Ost
+    for i in 1:4
+        diag(robot,side1,side2)
+        side1=(right(side1))
+        side2=(right(side2))
+    end
     
+    putmarker!(robot)
 end
 
 # ------------------------------------ 8 

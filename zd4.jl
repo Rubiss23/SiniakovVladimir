@@ -1,8 +1,8 @@
 include("func.jl")
-robot = Robot(animate = true);
+robot = Robot("sits/zd4.sit",animate = true);
 
-function zd4(robot,side1,side2)
+function zd4(robot)
 
-    crest(robot,side1,side2)
+    crest(robot)
 
 end
