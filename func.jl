@@ -70,10 +70,12 @@ function gocorner(robot,side1,side2)
 
     movealong!(robot,side1)
     movealong!(robot,side2)
-    if !isborder(robot,side1)
-        movealong!(robot,side1)
-    elseif !isborder(robot,side2)
-        movealong!(robot,side2)
+    while !(isborder(robot,side1) && isborder(robot,side2))
+        if !isborder(robot,side1)
+            movealong!(robot,side1)
+        elseif !isborder(robot,side2)
+            movealong!(robot,side2)
+        end
     end
     
 end
