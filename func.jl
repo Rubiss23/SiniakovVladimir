@@ -1,5 +1,5 @@
 using HorizonSideRobots
-dir = "/Users/sinakovvladimir/Documents/vscode/Robots"
+dir = "../SiniakovVladimir/Robots"
 
 filter_my(c) =  !startswith(c, ".")
 files = readdir(dir)
@@ -27,13 +27,6 @@ inverse(side::HorizonSide) = HorizonSide(mod(Int(side)+2, 4))
 along!(stop_condition::Function, robot, side) = 
     while stop_condition() == false && try_move!(robot, side) end
 
-function fastmove!(robot,side,n)
-
-    for i in 1:n
-        move!(robot,side)
-    end
-    
-end
 
 function perimetr(robot,side)
 
@@ -59,6 +52,14 @@ function movealong!(robot,side)
     return lenght
 end
 
+function movealong!(robot,side,length)
+    
+    for i in 1:length
+        move!(robot,side)
+    end
+
+end
+
 function along!(robot, side)
     while !isborder(robot, side)
         try_move!(robot, side)
@@ -79,8 +80,8 @@ end
 
 function gohome!(robot,side1,side2,n1,n2)
 
-    fastmove!(robot,inverse(side1),n1)
-    fastmove!(robot,inverse(side2),n2)
+    movealong!(robot,inverse(side1),n1)
+    movealong!(robot,inverse(side2),n2)
 
 end
 
