@@ -5,7 +5,7 @@ function zd3(robot)
 
     x = movealong!(robot,Nord)
     y = movealong!(robot,West)
-    markall!(robot,Ost,Sud)
+    markall!(robot)
     gocorner(robot,Nord,West)
     gohome!(robot,Nord,West,x,y)
     

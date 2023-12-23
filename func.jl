@@ -96,15 +96,17 @@ function markline(robot,side)
     
 end
 
-function markall!(robot,side1,side2)
+function markall!(robot)
+
+    side1 = Ost
 
     while !(isborder(robot,Sud) && isborder(robot,Ost))
         while !isborder(robot,side1)
             markline(robot,side1)
         end
         putmarker!(robot)
-        if !isborder(robot,side2)
-            move!(robot,side2)
+        if !isborder(robot,Sud)
+            move!(robot,Sud)
             putmarker!(robot)
         end
         side1=inverse(side1)

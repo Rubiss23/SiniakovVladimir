@@ -1,3 +1,32 @@
 {
-    "julia.environmentPath": "/Users/sinakovvladimir/Documents/github/SiniakovVladimir"
+    "workbench.colorCustomizations": 
+    {
+        "sideBarSectionHeader.border": "#c300ff",
+        "sideBarTitle.foreground": "#b700ff",
+        "activityBar.activeBackground": "#650c80",
+        "activityBar.border": "#c300ff",
+        "widget.border": "#c300ff",
+        "editorHint.border": "#c300ff",
+        "panel.border": "#c300ff",
+        "terminal.border": "#c300ff",
+        "badge.foreground": "#ff0000",
+        "tab.activeBorderTop": "#c300ff",
+        "dropdown.border": "#c300ff",
+        "focusBorder": "#c300ff",
+        "titleBar.border": "#c300ff74",
+        "checkbox.border": "#c300ff7a",
+        "window.activeBorder": "#c300ff8d",
+        "titleBar.activeForeground": "#f700ff",
+        "list.activeSelectionBackground": "#c300ff37",
+        "tab.border": "#c300ff8d",
+        "input.border": "#c300ff8d",
+        "sideBar.border": "#c300ff"
+
+
+
+    },
+    "julia.environmentPath": "/Users/nikolaiokhrimenko/Documents/vscode"
+
+
+
 }
