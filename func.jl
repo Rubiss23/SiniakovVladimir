@@ -374,9 +374,9 @@ function move_to_angle!(robot, angle=(Sud, West))::Vector{NamedTuple{(:side, :nu
     # - пустой вектор типа Vector{Tuple{HorizonSide,Int}}
     while !isborder(robot, angle[1]) || !isborder(robot, angle[2])
         push!(back_path, (side=inverse(angle[2]),
-            num_steps=movealong!(robot, angle[2])-1))
+            num_steps=movealong!(robot, angle[2])))
         push!(back_path, (side=inverse(angle[1]),
-            num_steps=movealong!(robot, angle[1])-1))
+            num_steps=movealong!(robot, angle[1])))
     end
     return reverse(back_path)
 end

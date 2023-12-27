@@ -20,7 +20,7 @@ function rek(n)
     if n <= 1
         return n
     else
-        return (task28_re!(n-1) + task28_re!(n-2))
+        return (rek(n-1) + rek(n-2))
     end
 end
 
@@ -31,7 +31,7 @@ function fibonacci_memo(n,memo=Dict())
     elseif haskey(memo,n)
         return memo[n]
     else
-        memo[n] = fibonacci(n-1,memo) + fibonacci(n-2,memo)
+        memo[n] = fibonacci_memo(n-1,memo) + fibonacci_memo(n-2,memo)
         return memo[n]
     end
 end
