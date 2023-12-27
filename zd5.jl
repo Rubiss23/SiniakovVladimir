@@ -11,7 +11,7 @@ function zd5(robot)
     while !isborder(robot,Nord) || !isborder(robot,West)
         if !isborder(robot,West)
             x+=movealong!(robot,West)
-            side1,side2 = side2,side2
+            side1,side2 = side2,side1
             x,y=y,x
         elseif !isborder(robot,Nord)
             y+=movealong!(robot,Nord)
